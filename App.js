@@ -22,7 +22,7 @@ exec("git clone https://github.com/vishesh-verma/react-basics.git", (error, stdo
     }
     console.log(`stdout: ${stdout}`);
 });
-exec("cd react-basics & yarn install", (error, stdout, stderr) => {
+exec("cd react-basics & npm install", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
