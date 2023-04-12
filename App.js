@@ -1,15 +1,6 @@
-const { exec, execSync, spawn } = require("child_process");
+const { exec, execSync } = require("child_process");
 const { log } = require("console");
 
-
-
- const child = spawn("cd react-basics",()=>{
-
- })
- child.on('npm install', function (code, signal) {
-    console.log('child process exited with ' +
-                `code ${code} and signal ${signal}`);
-  });
 // exec("ls ", (error, stdout, stderr) => {
 //     if (error) {
 //         console.log(`error: ${error.message}`);
@@ -32,19 +23,19 @@ const { log } = require("console");
 //     }
 //     console.log(`stdout: ${stdout}`);
 // });
-// execSync("cd react-basics", (error, stdout, stderr) => {
-//     if (error) {
-//         console.log(`error: ${error.message}`);
-//         return;
-//     }
-//     if (stderr) {
-//         console.log(`stderr: ${stderr}`);
-//         return;
-//     }
-//     console.log(`stdout: ${stdout}`);
+exec("cd react-basics && npm install && npm start", (error, stdout, stderr) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+    console.log(`stdout: ${stdout}`);
     
-// });
-// execSync("npm install", (error)=>{
+});
+// exec("npm install", (error)=>{
 //     if (error) {
 //         console.log(`error: ${error.message}`);
 //         return;
