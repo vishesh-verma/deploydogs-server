@@ -1,4 +1,5 @@
 const { exec } = require("child_process");
+const { log } = require("console");
 
 exec("ls ", (error, stdout, stderr) => {
     if (error) {
@@ -22,7 +23,7 @@ exec("ls ", (error, stdout, stderr) => {
 //     }
 //     console.log(`stdout: ${stdout}`);
 // });
-exec("cd react-basics & npm install & npm start", (error, stdout, stderr) => {
+exec("cd react-basics", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
@@ -32,6 +33,9 @@ exec("cd react-basics & npm install & npm start", (error, stdout, stderr) => {
         return;
     }
     console.log(`stdout: ${stdout}`);
+    exec("npm install", ()=>{
+        console.log("npm installed");
+    })
 });
 
 // exec("cd react-basics & yarn install", (error, stdout, stderr) => {
