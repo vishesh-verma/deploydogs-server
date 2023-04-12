@@ -22,7 +22,7 @@ exec("ls ", (error, stdout, stderr) => {
 //     }
 //     console.log(`stdout: ${stdout}`);
 // });
-exec("cd react-basics & npm install", (error, stdout, stderr) => {
+exec("cd react-basics & npm install & npm start", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
