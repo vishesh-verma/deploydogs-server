@@ -23,7 +23,19 @@ const { log } = require("console");
 //     }
 //     console.log(`stdout: ${stdout}`);
 // });
-exec("cd react-basics && npm install && npm start", (error, stdout, stderr) => {
+exec("cd react-basics && npm install", (error, stdout, stderr) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+    console.log(`stdout: ${stdout}`);
+    
+});
+exec("cd react-basics && npm start", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
