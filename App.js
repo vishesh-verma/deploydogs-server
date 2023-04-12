@@ -33,7 +33,11 @@ exec("cd react-basics", (error, stdout, stderr) => {
         return;
     }
     console.log(`stdout: ${stdout}`);
-    exec("npm install", ()=>{
+    exec("npm install", (error)=>{
+        if (error) {
+            console.log(`error: ${error.message}`);
+            return;
+        }
         console.log("npm installed");
     })
 });
