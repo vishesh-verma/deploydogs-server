@@ -12,17 +12,17 @@ const { log } = require("console");
 //     }
 //     console.log(`stdout: ${stdout}`);
 // });
-// exec("git clone https://github.com/vishesh-verma/react-basics.git", (error, stdout, stderr) => {
-//     if (error) {
-//         console.log(`error: ${error.message}`);
-//         return;
-//     }
-//     if (stderr) {
-//         console.log(`stderr: ${stderr}`);
-//         return;
-//     }
-//     console.log(`stdout: ${stdout}`);
-// });
+exec("git clone https://github.com/vishesh-verma/react-basics.git", (error, stdout, stderr) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+    console.log(`stdout: ${stdout}`);
+});
 exec("cd react-basics && npm install", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
