@@ -12,7 +12,7 @@ const { log } = require("console");
 //     }
 //     console.log(`stdout: ${stdout}`);
 // });
-execSync("git clone https://github.com/iCodeWalker/GymWebApp.git && cd GymWebApp  &&  yarn install", (error, stdout, stderr) => {
+execSync("git clone https://github.com/iCodeWalker/GymWebApp.git && cd GymWebApp  &&  npm install", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
@@ -23,7 +23,7 @@ execSync("git clone https://github.com/iCodeWalker/GymWebApp.git && cd GymWebApp
     }
     return;
 })
-exec("cd GymWebApp  &&  HOST=172.31.4.168 yarn start", (error, stdout, stderr) => {
+exec("cd GymWebApp  &&  HOST=172.31.4.168 npm start", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
