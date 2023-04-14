@@ -23,7 +23,7 @@ execSync("git clone https://github.com/iCodeWalker/GymWebApp.git && cd GymWebApp
     }
     return;
 })
-exec("cd GymWebApp  &&  HOST=172.31.31.244 npm start", (error, stdout, stderr) => {
+exec("cd GymWebApp  &&  HOST=172.31.4.168 npm start", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
